@@ -1,68 +1,106 @@
 // 1. What will be the output of this code?
 
-console.log(x);
-var x =5;
-// output-- undefined
+let x=5;
+let y=x;
+x=10;
+console.log(x); // output-- 10
+console.log(y); // output-- 5
+
 
 
 // 2.What will be the output of this code?
-
-console.log(a);
-var a;
-// output-- undefined
-
-
-// 3.What will be the output of this code?
-
-console.log(b);
-b=10;
-var b;
-// output-- undefined
+let obj1={ name:"Alice"};
+let obj2=obj1;
+obj1.name="Bob";
+console.log(obj1.name); // output-- Bob
+console.log(obj2.name); // output-- Bob
 
 
-// 4.What will happen here?
+// 3.
+    let a="hello";
+    let b=42;
+    let c=true;
+    let d={key:"value"};
+    let e=null;
+    let f=undefined;
 
-// console.log(c);
-// output-- Referenceerror: c is not defined
-
-
-// 6.What will be the output of this code?
-
-console.log(e) //  output-- undefined
-
-var e=10;
-console.log(e); // output-- 10
-e=20;
-console.log(e); // output-- 20
-
-
-// 7.What will be the output of this code?
-
-console.log(f); // output-- undefined
-var f=100;
-var f;
-console.log(f); //output-- 100
+    console.log(typeof a); // output-- string
+    console.log(typeof b); // output-- number
+    console.log(typeof c); // output-- Boolean
+    console.log(typeof d); // output-- object
+    console.log(typeof e); // output-- object
+    console.log(typeof f); // output-- undefined
 
 
-// 8.What will be the output of this code?
+// 4.
+    let numbers=[10,20,30,40,50];
 
-console.log(g); // output-- undefined
-var g=g+1;
-console.log(g); // output--NaN --Not a Number
+    console.log(numbers[2]); // output-- 30
+    console.log(numbers[0]); // output-- 10
+    console.log(numbers[numbers.length-1]); // output-- 50
+
+// 5.
+    let fruits=["apple", "banana", "mango"];
+    fruits[1]="orange";
+
+    console.log(fruits); // output-- ['apple', 'orange', 'mango'"]
 
 
-// 9.What will be the output of this code?
+// 6.
+    let matrix=[
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+    ];
 
-var h;
-console.log(h); // output-- undefined
-h=50;
-console.log(h); //output-- 50
+    console.log(matrix[1][2]); // output-- 6
+    console.log(matrix[2][0]); // output-- 7
 
 
-// 10.What will be the output of this code?
 
-console.log(i); // output-- undefined
-i=10;
-var i=5;
-console.log(i); // output-- 5
+// 7.
+    let person={
+        name:"Jhon",
+        age:25,
+        city:"New York"
+    };
+
+    console.log(person.name); //output-- Jhon
+    console.log(person.age);  //output-- 25
+
+
+
+
+// 8.
+    let car={
+        make:"Toyota",
+        model:"Corolla",
+        year:2021
+    };
+    console.log(car["make"]); //output-- Toyota
+    console.log(car["model"]); //output-- Corolla
+
+
+
+
+// 9.
+    let book ={
+        title:"The Great Gatsby",
+        author:"F.Scott Fitzgerald"
+    };
+    book.author="Anonymous";
+    console.log(book.author); //output-- Anonymous
+
+
+
+
+// 10.
+    let student={
+        name:"Alice",
+        grade:"A"
+    };
+
+    student.age=20;
+    console.log(student); //output-- {name:'Alice', grade:'A', age:20}
+
         
